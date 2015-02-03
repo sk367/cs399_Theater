@@ -1,1 +1,1 @@
-# cs399_Theater
+CS 399 Theater Project
