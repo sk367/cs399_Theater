@@ -3,7 +3,9 @@ from django.shortcuts import render
 from main.models import Events
 
 def index(request):
-	return render(request, 'index.html')
+  soonest_event = Events.objects.order_by('date')[0]
+  context = {'soonest_event': soonest_event}
+  return render(request, 'index.html', context)
 
 def location(request):
 	return render(request, 'location.html')

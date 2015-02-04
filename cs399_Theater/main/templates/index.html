@@ -1,2 +1,11 @@
 {% extends 'base.html' %}
 {% block pagetitle %} Home {% endblock %}
+Other text goes here, just checking
+
+{% block body %}
+<h1>Next Performance:</h1>
+  <h2>{{soonest_event.name}}</h2>
+  <p>{{soonest_event.description}}</p>
+  <h3>Coming {{soonest_event.date}}!</h3>
+{% endblock %}
+
