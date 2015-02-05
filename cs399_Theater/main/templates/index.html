@@ -3,9 +3,50 @@
 Other text goes here, just checking
 
 {% block body %}
-<h1>Next Performance:</h1>
-  <h2>{{soonest_event.name}}</h2>
-  <p>{{soonest_event.description}}</p>
-  <h3>Coming {{soonest_event.date}}!</h3>
+  <body>
+
+    <div class="container">
+      
+      <div class="jumbotron">
+        <h1>Moore Theater</h1>
+        <p class="lead">Looking for something to do on your night off? Why not click the link below or on the navigation bar to check out our performances this week.</p>
+        <p><a class="btn btn-lg btn-success" href="\performances" role="button">Performances</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h3>Upcoming</h3>
+          <p>This month, we are hoping to gain performances from the Golden Mammoths and Crazy Arms! Follow us on Facebook and Twitter to stay posted.</p>
+
+          <h3>About</h3>
+          <p>Being passionate about the performing arts, the Moore family was unhappy with the lacking theaters in Flagstaff. They decided to open their own theater in the 90s and have been thriving ever since.</p>
+
+          <h3>Location</h3>
+          <p>Wondering how to find our totally obscure theater? Check out the Location tab to see how to find us.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h3>Theater News</h3>
+          <p>There will be construction on the theater in the upcoming year. We plan to add more stages to offer more performances at once!</p>
+
+          <h3>Merchandise</h3>
+          <p>Working with our up and coming artists, we are offering merchandise for our theater and performers in our shop. Please check it out!</p>
+
+          <h3>Tickets</h3>
+          <p>Please check out our Tickets tab in the navigation bar to reserve you spot at our performances this week.</p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Moore Theater 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
 {% endblock %}
 
