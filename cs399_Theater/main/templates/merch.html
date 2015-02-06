@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
 {% block pagetitle %} Merchandise {% endblock %}
 {% block body %}
+<div class="container">
   <body>
     <div class="container">
-	<h1 style="color: white;">Merchandise Table</h1>
-
+	<h1 style="color: white;">Available Merchandise</h1>
+	<table class="table text-center" style="background-color:Black;opacity:.75;">
+     	<thead class="text-center">
+     		<th style="text-align:center;">Item</th>
+     		<th style="text-align:center;">Price</th>
+     		
+     		
+     	</thead>
+     {% for merch in merchandise %} 
+     <tr> <td>{{ merch.item }} </td>
+     	<td> ${{ merch.price }} </td>
+     	
+     	
+     </tr>
+     {% endfor %}
+     </table>
     </div> <!-- /container -->
   </body>
+</div>
 {% endblock %}
