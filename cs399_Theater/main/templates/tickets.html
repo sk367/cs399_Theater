@@ -1,9 +1,23 @@
 {% extends 'base.html' %}
 {% block pagetitle %} Tickets {% endblock %}.
 {% block body %}
+<div class="container">
   <body>
     <div class="container">
 	<h1>Tickets Table</h1>
+	<table class="table text-center" style="background-color:Black;opacity:.75;">
+     	<thead class="text-center">
+     		<th style="text-align:center;">Title</th>
+     		<th style="text-align:center;">Date</th>
+     		<th style="text-align:center;">Available Tickets</th>
+     	</thead>
+     {% for ticket in tickets %} 
+     <tr> <td>{{ ticket.name }} </td>
+     	<td> {{ ticket.date }} </td>
+     	<td> {{ ticket.available }} </td>
+     </tr>
+     {% endfor %}
+     </table>
 
     </div> <!-- /container -->
   </body>

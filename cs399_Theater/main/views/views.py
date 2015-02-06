@@ -1,6 +1,7 @@
 
 from django.shortcuts import render
 from main.models import Events
+from main.models import Tickets
 
 def index(request):
   	return render(request, 'index.html')
@@ -11,6 +12,4 @@ def merch(request):
 def performances(request):
 	return render(request, 'performances.html', {'events': Events.objects.order_by('date')})
 def tickets(request):
-  soonest_event = Events.objects.order_by('date')[0:]
-  context = {'soonest_event': soonest_event}
-  return render(request, 'tickets.html', context)
+  return render(request, 'tickets.html', {'tickets': Tickets.objects.order_by('date')})
