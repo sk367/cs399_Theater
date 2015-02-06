@@ -9,7 +9,7 @@ def index(request):
 def location(request):
 	return render(request, 'location.html')
 def merch(request):
-	return render(request, 'merch.html', {'merchandise': Merch.objects.order_by('price')})
+	return render(request, 'merch.html', {'merchs': Merch.objects.order_by('price')})
 def performances(request):
 	return render(request, 'performances.html', {'events': Events.objects.order_by('date')})
 def tickets(request):
