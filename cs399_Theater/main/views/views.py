@@ -14,4 +14,6 @@ def merch(request):
 def performances(request):
 	return render(request, 'performances.html')
 def tickets(request):
-	return render(request, 'tickets.html')
+  soonest_event = Events.objects.order_by('date')[0:]
+  context = {'soonest_event': soonest_event}
+  return render(request, 'tickets.html', context)
