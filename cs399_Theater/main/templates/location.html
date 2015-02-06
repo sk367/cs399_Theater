@@ -2,16 +2,17 @@
 {% block pagetitle %} Location {% endblock %}
 {% block body %}
     <body>
-    <div class="container">
+    <div class="container-fluid" style="text-align:center">
         <h1 style="color: white;">The Moore Theater</h1>
 
         <!-- Embedded Google Maps Block -->
         <head>
             <style>
                 #map-canvas {
-                    width: 500px;
-                    height: 400px;
+                    width: 100%;
+                    height: 380px;
                 }
+                
             </style>
             <script src="https://maps.googleapis.com/maps/api/js"></script>
             <script>
@@ -28,7 +29,7 @@
                     var marker = new google.maps.Marker({
                         position: myLatlng,
                         map: map,
-                        title: 'Hello World!'
+                        title: 'Moores Theater'
                     });
 
                 }
@@ -36,7 +37,11 @@
             </script>
         </head>
         <body>
-        <div id="map-canvas"></div>
+        <div id="middle">
+	  <div id ="middlecontent">
+	      <div id="map-canvas"></div>
+	  </div>
+	</div>
         </body>
         <!-- End of Google Maps -->
 
@@ -44,8 +49,7 @@
         <p></p>
 
 
-        <div class="row marketing">
-        <div class="col-lg-6">
+        <div class="row marketing" style="text-align:center">
           <h3 style="color: white;">Address</h3>
           <p style="color: white;">84637 Opera Road, Flagstaff, Arizona 86001</p>
         </div>
