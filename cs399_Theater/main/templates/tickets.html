@@ -10,11 +10,23 @@
      		<th style="text-align:center;">Title</th>
      		<th style="text-align:center;">Date</th>
      		<th style="text-align:center;">Available Tickets</th>
+     		<th style="text-align:center;">Quantity</th>
+
      	</thead>
      {% for ticket in tickets %} 
      <tr> <td>{{ ticket.name }} </td>
      	<td> {{ ticket.date }} </td>
      	<td> {{ ticket.available }} </td>
+     	<td> <div style="color:black">
+	    <select>
+	      <option value="0">0</option>
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	     </select>
+	     </div>
+	    </td>
      </tr>
      {% endfor %}
      </table>
