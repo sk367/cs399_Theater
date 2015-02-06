@@ -16,3 +16,7 @@ def tickets(request):
     return render(request, 'tickets.html', {'tickets': Tickets.objects.order_by('date')})
 def golden(request):
     return render(request, 'golden.html', {})
+def sqeaky(request):
+    return render(request, 'sqeaky.html', {})
+def sheri(request):
+    return render(request, 'sheri.html', {})

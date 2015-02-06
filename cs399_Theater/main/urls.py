@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from views.views import index, location, merch, performances, tickets, golden
+from views.views import index, location, merch, performances, tickets, golden, sqeaky, sheri
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'main.views.home', name='home'),
@@ -12,5 +12,8 @@ urlpatterns = patterns('',
     url(r'^merch', merch),
     url(r'^performances', performances),
     url(r'^tickets', tickets),
-    url(r'^golden', golden)
+    url(r'^golden', golden),
+    url(r'^sqeaky', sqeaky),
+    url(r'^sheri', sheri)
+
 )
