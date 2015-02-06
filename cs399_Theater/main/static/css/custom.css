@@ -19,4 +19,17 @@ body {
 #middlecontent {
     font: normal 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
     padding: 10px;
+    background:black;
 }
+
+.jumbotron {
+   background:black;
+   background-image:url('../main.jpg');
+   background-position:center;
+   background-repeat:no-repeat
+}
+
+.title {
+  text-align: center;
+}
+
