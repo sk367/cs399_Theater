@@ -1,12 +1,51 @@
 {% extends 'base.html' %}
 {% block pagetitle %} Location {% endblock %}
 {% block body %}
-  <body>
+    <body>
     <div class="container">
-	<h1>Google Map of random location</h1>
-      <footer class="footer">
-        <p>&copy; Moore Theater 2015</p>
-      </footer>
+        <h1>The Moore Theater</h1>
+
+        <!-- Embedded Google Maps Block -->
+        <head>
+            <style>
+                #map-canvas {
+                    width: 500px;
+                    height: 400px;
+                }
+            </style>
+            <script src="https://maps.googleapis.com/maps/api/js"></script>
+            <script>
+                function initialize() {
+                    var mapCanvas = document.getElementById('map-canvas');
+                    var myLatlng = new google.maps.LatLng(35.1987096,-111.6493141);
+                    var mapOptions = {
+                        center: new google.maps.LatLng(35.1987096,-111.6493141),
+                        zoom: 17,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    }
+                    var map = new google.maps.Map(mapCanvas, mapOptions)
+
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        title: 'Hello World!'
+                    });
+
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+            </script>
+        </head>
+        <body>
+        <div id="map-canvas"></div>
+        </body>
+        <!-- End of Google Maps -->
+
+        <p></p>
+        <p></p>
+
+        <footer class="footer">
+            <p>&copy; Moore Theater 2015</p>
+        </footer>
     </div> <!-- /container -->
-  </body>
+    </body>
 {% endblock %}
