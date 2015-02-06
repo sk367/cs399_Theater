@@ -14,3 +14,5 @@ def performances(request):
 	return render(request, 'performances.html', {'events': Events.objects.order_by('date')})
 def tickets(request):
     return render(request, 'tickets.html', {'tickets': Tickets.objects.order_by('date')})
+def golden(request):
+    return render(request, 'golden.html', {})

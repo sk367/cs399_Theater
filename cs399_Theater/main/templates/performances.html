@@ -15,7 +15,8 @@
      		<th style="text-align:center;">Cost</th>
      	</thead>
      {% for event in events %} 
-     <tr> <td>{{ event.name }} </td>
+     <tr>
+        <td> <a class="btn btn-default" href="\golden" role="button">{{ event.name }}</a> </td>
      	<td> {{ event.description }} </td>
      	<td> {{ event.date }} </td>
      	<td> {{ event.genre }} </td>
